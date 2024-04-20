@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Tablas</title>
@@ -15,25 +15,23 @@
 <!--Elimine las siglas CPAR, y 'Campus Party' debe ocupar 2 celdas-->
 <!--Como campus party y Jaiio comparten el mismo lugar, unifique las celdas que contienen 'Buenos Aires'-->
 <body>
+<!-- Comentario de prueba-->
 <table>
     <thead>
-    <tr>
-      <td> Siglas </td>
-      <td> Congreso o Evento </td>
-      <td> Carrera </td>
-      <td> Web </td>
-      <td> Lugar </td>
-      <td> Fecha </td>
-    </tr>
+      <th> Siglas </th>
+      <th> Congreso o Evento </th>
+      <th> Carrera </th>
+      <th> Web </th>
+      <th> Lugar </th>
+      <th> Fecha </th>
     </thead>
-    </body>
+    <tbody>
     
 <tr>
-    <td> CPAR </td>
-    <td> Campus Party </td>
+    <td colspan ="2"> Campus Party </td>
     <td> Computación/Sistemas </td>
     <td><a href="http://argentina.campus-party.org/">http://argentina.campus-party.org/</td>
-    <td> Buenos Aires </td>
+    <td rowspan="2"> Buenos Aires </td>
     <td> 25-abr al 28-abr </td>
 </tr>
 <tr>
@@ -41,7 +39,6 @@
     <td> Jornadas Argentinas de Informática </td>
     <td> Computación/Sistemas </td>
     <td><a href="http://47jaiio.sadio.org.ar">http://47jaiio.sadio.org.ar </td>
-    <td> Buenos Aires </td>
     <td> 3-sep al 7-sep </td>
 </tr>
 
@@ -53,7 +50,7 @@
     <td> Corrientes </td>
     <td> 18-mar al 27-abr </td>
 </tr>
-
+</tbody>
 </table>
 </body>
 </html>
