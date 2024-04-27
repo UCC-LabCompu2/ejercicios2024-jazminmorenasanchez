@@ -31,9 +31,15 @@
     </p>
     <p>
         Sexo:<br>
-        <input type="radio" name="genero" value="masculino">Masculino
-        <input type="radio" name="genero" value="femenino">Femenino
-        <input type="radio" name="genero" value="nomostrar">prefiero no revelarlo
+        <label for="genero-m">
+        <input type="radio" id="genero-m" name="genero" value="masculino">Masculino
+        </label>
+        <label for="genero-f">
+        <input type="radio" id="genero-f" name="genero" value="femenino">Femenino
+        </label>
+        <label for="genero-no">
+        <input type="radio" id="genero-no" name="genero" value="nomostrar">prefiero no revelarlo
+        </label>
     </p>
     <p>
         <label for="edad">
@@ -62,12 +68,13 @@
     </p>
 
     <p>
-        Tipo de servicio:
-        <select>
+        <label for="servicio"> Tipo de servicio:</label>
+        <select id="servicio" name="servicio">
             <option value="free"> Free </option>
             <option value="standar">Standard </option>
             <option value="premium">Premium</option>
         </select>
+    </p>
     <p>
         Tema:
         <input type="checkbox" name="politica" id="chkpolitica">
@@ -80,9 +87,10 @@
         <label for="chksalud"> salud</label>
     </p>
     <p>
-        Agregue un comentario:<br>
-        <textarea name="comentario" id="comentario" rows="10" cols="50">
+        <label for="comentario"> Agregue un comentario: <br> </label>
+            <textarea name="comentario" id="comentario" rows="10" cols="50">
             ingrese un comentario...
+
         </textarea>
     </p>
     <p>
