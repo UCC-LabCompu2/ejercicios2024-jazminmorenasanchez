@@ -50,3 +50,10 @@ function convertirGR(id) {
 
 //EJERCICIO 3: MOSTRAR/OCULTAR DIV
 
+function mostarocultar(valormo) {
+    if (valormo == "val_mostrar"){
+        document.getElementById("divmo").style.display = 'block';
+    }else if (valormo =="val_ocultar"){
+        document.getElementById("divmo").style.display = 'none';
+    }
+}
