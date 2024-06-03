@@ -102,3 +102,24 @@ function calculardiv() {
     num2 = document.getElementsByName("div_num2")[0].value;
     document.getElementsByName("div_total")[0].innerHTML = Number(num1) / Number(num2);
 }
+
+
+//EJERCICIO 5:
+function cargarweb(){
+    var cant, unidad, urlcomp;
+
+    cant = document.getElementsByName("distancia").value;
+    unidad = document.getElementsByName("uniades").value;
+    urlcomp = "segundaWeb.html#" + cant+ "#" + unidad;
+    window.open(urlcomp);
+}
+
+function cargarresultado() {
+    var urlcomp, cant , un;
+
+    urlcomp = window.location.href.split("/")[5];
+    cant = urlcomp.split("#")[1];
+    un = urlcomp.split("#")[2];
+
+    document.getElementsByName("dist").value = cant + " " + un;
+}
