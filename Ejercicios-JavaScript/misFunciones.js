@@ -108,18 +108,20 @@ function calculardiv() {
 function cargarweb(){
     var cant, unidad, urlcomp;
 
-    cant = document.getElementsByName("distancia").value;
-    unidad = document.getElementsByName("uniades").value;
-    urlcomp = "segundaWeb.html#" + cant+ "#" + unidad;
+    cant = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+
+    urlcomp = "segundaWeb.html#" + cant + "#" + unidad;
     window.open(urlcomp);
 }
 
 function cargarresultado() {
-    var urlcomp, cant , un;
+    var urlcomp, can, un;
 
     urlcomp = window.location.href.split("/")[5];
-    cant = urlcomp.split("#")[1];
+
+    can = urlcomp.split("#")[1];
     un = urlcomp.split("#")[2];
 
-    document.getElementsByName("dist").value = cant + " " + un;
+    document.getElementById("dist").value = can + " " + un;
 }
