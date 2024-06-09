@@ -142,3 +142,21 @@ function cargarlocalstorage() {
     un = localStorage.getItem("unidadls");
     document.getElementById("dist").value = cant + " " + un;
 }
+
+// canvas
+
+function dibujarcircua() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var xmax = canvas.width;
+    var ymax = canvas.height;
+    var margen = 5;
+    ctx.fillStyle = "#339";
+    ctx.fillRect(0+margen, ymax-40-margen, 40, 40);
+
+    ctx.arc(xmax/2, ymax/2, 20, 0 ,2*Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "#300";
+    ctx.fill()
+
+}
