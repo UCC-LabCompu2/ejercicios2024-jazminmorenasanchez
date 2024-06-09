@@ -160,3 +160,28 @@ function dibujarcircua() {
     ctx.fill()
 
 }
+
+//mini-paint
+var bandera;
+function dibujar(event) {
+    var canvas = document.getElementById("canvasadibujar");
+    var ctx = canvas.getContext("2d");
+
+    var posx = event.clientX;
+    var posy = event.clientY;
+    console.log(posx, posy);
+
+    canvas.onmousedown = function(){bandera = true};
+    canvas.onmouseup = function(){bandera = false};
+
+    if(bandera) {
+        ctx.fillRect(posx, posy, 5, 5);
+        ctx.fill;
+    }
+}
+function limpiarcanvas() {
+    var canvas = document.getElementById("canvasadibujar");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+}
