@@ -125,3 +125,20 @@ function cargarresultado() {
 
     document.getElementById("dist").value = can + " " + un;
 }
+//local storage
+
+function guardarlocalstorage() {
+    let distancia, unidad;
+    distancia = document.getElementById('distancia').value;
+    unidad = document.getElementsByName('unidades')[0].value;
+    localStorage.setItem("distancials", distancia);
+    localStorage.setItem("unidadls", unidad);
+    window.open('2_Web.html');
+}
+
+function cargarlocalstorage() {
+    let cant, un;
+    cant = localStorage.getItem("distancials");
+    un = localStorage.getItem("unidadls");
+    document.getElementById("dist").value = cant + " " + un;
+}
